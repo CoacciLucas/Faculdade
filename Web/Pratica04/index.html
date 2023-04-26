@@ -1,14 +1,102 @@
-<table>
-  <thead>
-    <tr>
-      <th>Nome do Aluno</th>
-      <th>Nota P1</th>
-      <th>Nota P2</th>
-      <th>Nota T1</th>
-      <th>Nota Total</th>
-      <th>Faltas</th>
-    </tr>
-  </thead>
-  <tbody id="tabela"></tbody>
-</table>
-<div id="media-notas"></div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tabela de Notas</title>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+
+      #media-notas {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        border-radius: 50%;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Nome do Aluno</th>
+        <th>Nota P1</th>
+        <th>Nota P2</th>
+        <th>Nota T1</th>
+        <th>Nota Total</th>
+        <th>Faltas</th>
+      </tr>
+      <tr>
+        <td>Lucas</td>
+        <td>8.5</td>
+        <td>7.0</td>
+        <td>9.0</td>
+        <td>24.5</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>João</td>
+        <td>9.0</td>
+        <td>8.5</td>
+        <td>7.5</td>
+        <td>25.0</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Carla</td>
+        <td>6.5</td>
+        <td>7.5</td>
+        <td>9.5</td>
+        <td>23.5</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Maria</td>
+        <td>10.0</td>
+        <td>9.5</td>
+        <td>10.0</td>
+        <td>29.5</td>
+        <td>0</td>
+      </tr>
+    </table>
+
+    <div id="media-notas">Média: 25,625</div>
+
+    <script>
+      const table = document.querySelector("table");
+      const cells = table.querySelectorAll("td");
+
+      cells.forEach((cell) => {
+        cell.addEventListener("click", () => {
+          alert(cell.innerText);
+        });
+      });
+
+      const notas = Array.from(cells).filter(
+        (cell, index) => (index + 1) % 5 !== 0
+      );
+      const totalNotas = notas.reduce(
+        (acc, cell) => acc + Number(cell.innerText),
+        0
+      );
+    </script>
+  </body>
+</html>
