@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercícios de JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Exercício 1</h2>
+    <label for="ano-nascimento">Ano de nascimento:</label>
+    <input type="number" id="ano-nascimento" /><br /><br />
+
+    <label for="ano-atual">Ano atual:</label>
+    <input type="number" id="ano-atual" /><br /><br />
+
+    <button onclick="calcularIdade()">Calcular idade</button>
+
+    <p>Idade no ano atual: <span id="idade-atual"></span></p>
+    <p>Idade em 2050: <span id="idade-2050"></span></p>
+
+    <hr />
+
+    <h2>Exercício 2</h2>
+    <label for="salario">Salário:</label>
+    <input type="number" id="salario" /><br /><br />
+
+    <button onclick="calcularAumento()">Calcular aumento</button>
+
+    <p>Novo salário: <span id="novo-salario"></span></p>
+
+    <hr />
+
+    <h2>Exercício 3</h2>
+    <label for="temperatura-celsius">Temperatura em Celsius:</label>
+    <input type="number" id="temperatura-celsius" /><br /><br />
+
+    <button onclick="calcularFahrenheit()">Converter para Fahrenheit</button>
+
+    <p>Temperatura em Fahrenheit: <span id="temperatura-fahrenheit"></span></p>
+
+    <hr />
+
+    <h2>Exercício 4</h2>
+    <label for="nota1">Nota 1:</label>
+    <input type="number" id="nota1" /><br /><br />
+
+    <label for="nota2">Nota 2:</label>
+    <input type="number" id="nota2" /><br /><br />
+
+    <label for="nota3">Nota 3:</label>
+    <input type="number" id="nota3" /><br /><br />
+
+    <button onclick="calcularMedia()">Calcular média</button>
+
+    <p>Média aritmética: <span id="media"></span></p>
+
+    <hr />
+
+    <h2>Exercício 5</h2>
+    <label for="cateto1">Cateto 1:</label>
+    <input type="number" id="cateto1" /><br /><br />
+
+    <label for="cateto2">Cateto 2:</label>
+    <input type="number" id="cateto2" /><br /><br />
+
+    <button onclick="calcularHipotenusa()">Calcular hipotenusa</button>
+
+    <p>Hipotenusa: <span id="hipotenusa"></span></p>
+
+    <hr />
+
+    <h2>Exercício 6</h2>
+    <label for="raio">Raio:</label>
+    <input type="number" id="raio" /><br /><br />
+
+    <button onclick="calcularEsfera()">Calcular</button>
+
+    <p>Comprimento: <span id="comprimento"></span></p>
+    <p>Área: <span id="area"></span></p>
+    <script src="script.js"></script>
+  </body>
+</html>

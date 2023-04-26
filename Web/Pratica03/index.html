@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pratica 03</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Exercício 01</h1>
+      <div>
+        <label for="valorCompra">Valor da compra:</label>
+        <input type="number" id="valorCompra" name="valorCompra" />
+      </div>
+      <div>
+        <label for="valorPago">Valor pago:</label>
+        <input type="number" id="valorPago" name="valorPago" />
+      </div>
+      <button onclick="calcularTroco()">Calcular troco</button>
+
+      <p id="resultadoTROCO"></p>
+
+      <h1>Exercicio 02</h1>
+      <label>Digite um número:</label>
+      <input type="number" id="numero" />
+      <p id="numeros-informados"></p>
+      <p id="media"></p>
+      <button onclick="adicionarNumero()">Adicionar número</button>
+      <button onclick="calcularMedia()">Calcular média</button>
+
+      <h1>Exercicio 03</h1>
+      <input type="number" id="numeroMaior">
+    <button onclick="adicionarNumeroMaior()">Adicionar Número</button>
+    <button onclick="mostrarMaiorNumero()">Maior Número</button>
+    <ul id="lista-numeros"></ul>
+    <ul id="maior-numero"></ul>
+    <script src="script.js"></script>
+  </body>
+</html>
